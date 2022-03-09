@@ -1,8 +1,5 @@
-/*
 
-Stylesheet for CSS Demo
-
-*/
+/* ---Stylesheet for CSS Demo--- */
 
 /* ---------------Box Sizing----------------- */
 
@@ -24,6 +21,27 @@ html {
 
   img{
     max-width: 100%;
+  }
+
+  .img-right{
+    float:right;
+    margin-left:20px;
+    border:3px solid cadetblue;
+    padding:5px;
+  }
+
+  .img-left{
+    float:left;
+    margin-right:20px;
+    border:3px solid cadetblue;
+    padding:5px;
+  }
+
+  .img-center{
+    display:block;
+    margin:20px auto;
+    border:3px solid cadetblue;
+    padding:5px;
   }
 /* Global Styles*/
 body{
@@ -148,4 +166,87 @@ article.widget footer{
   color:fff;
   font-size:.8rem;
   text-transform:uppercase;
+}
+
+#additional-elements h2{
+  font-size: 1.4rem;
+  /* Top | left/right | Bottom*/
+  margin:20px auto 40px;
+}
+
+#additional-elements a{
+  color: white;
+}
+
+#additional-elements a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+
+#additional-elements h3{
+  border-left:10px solid #ffffff;
+  padding: 8px;
+}
+
+table{
+  width:100%;
+  border:1px solid cadetblue;
+  border-collapse:collapse;
+}
+
+tr{}
+
+tr:nth-child(odd){
+  background-color: rgba(0,0,0,.1);
+}
+
+tr:hover{
+  background-color: rgba(0,0,0,.3);
+}
+
+td:nth-child(2n), td:nth-child(3n){
+  text-align:right;
+}
+
+th{
+  background-color: #172635;
+  color:#ffffff;
+  width: 33%;
+  padding: 10px;
+}
+
+td{
+  border:1px solid #5f9ea0;
+  padding:5px;
+}
+
+table caption{
+  color: #3b638b;
+  padding:10px;
+  font-weight: bold;
+  font-size: 1.4 rem;
+}
+
+#additional-elements ol{
+  list-style-type: upper-roman;
+  list-style-position: outside;
+} 
+
+#additional-elements ul{
+  list-style-type: square;
+}
+
+#additional-elements ul ul{
+  list-style-type: disc;
+}
+
+dl{}
+dt{
+  font-weight:bold;
+}
+dd{margin-left: 0;}
+/*adjacent sibling combinator*/
+dd +dt{
+  margin-top:1rem;
 }
