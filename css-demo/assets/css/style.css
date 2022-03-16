@@ -1,6 +1,11 @@
 
 /* ---Stylesheet for CSS Demo--- */
-
+/* Color Pallete 
+#FFAD42
+#E8843C
+#FF7E4F
+#E8503C
+#FF4252 */
 /* ---------------Box Sizing----------------- */
 
 html {
@@ -26,36 +31,38 @@ html {
   .img-right{
     float:right;
     margin-left:20px;
-    border:3px solid cadetblue;
+    border:3px solid #E8503C;
     padding:5px;
   }
 
   .img-left{
     float:left;
     margin-right:20px;
-    border:3px solid cadetblue;
+    border:3px solid #E8503C;
     padding:5px;
   }
 
   .img-center{
     display:block;
     margin:20px auto;
-    border:3px solid cadetblue;
+    border:3px solid #E8503C;
     padding:5px;
   }
 /* Global Styles*/
 body{
-    background-color:coral;
     font-family: 'Roboto', sans-serif;
     margin:0;
 }
 
 header.primary {
-  background-color: cadetblue;
+  background-color: #FF7E4F;
   text-align: center;
   color:#ffffff;
   padding: 40px;
   text-shadow: 4px 2px #000000;
+  /*svg background */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%239C92AC' fill-opacity='0.8'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
 }
 
 header.primary h1 a{
@@ -69,10 +76,17 @@ header.primary h2{
   margin:20px auto 40px;
 }
 
-header.primary nav{}
+header.primary nav{
+  width: 80vw;
+  margin: 0 auto;
+  max-width: 900px;
+}
 header.primary nav ul{
   /*removes extra space for list ittem attachments*/
   padding:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 header.primary nav ul li{
   list-style-type: none;
@@ -80,16 +94,28 @@ header.primary nav ul li{
 header.primary nav ul li a{
   color:#ffffff;
   text-decoration: none;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 8px 16px;
-  margin-bottom: 1rem;
+  border-radius: 20px;
+  transition: 0.3s;
   display: inline-block;
 }
 
+#intro {
+  border-bottom: 1px dotted #c0c0c0;
+  padding-bottom: 1.1rem;
+}
+
+#intro h2 {
+  color: #E8843C;
+  border-bottom: 1px dotted #c0c0c0;
+}
 #content{
   display:flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  border-bottom:1px dotted #c0c0c0;
+  padding-bottom: 2.8rem;
 }
 
 #content article.post{
@@ -121,7 +147,8 @@ time.post-date, figcaption, .post-meta{
 }
 
 .post a{
-  color:cadetblue;
+  color: #E8503C;
+  transition: .5s;
 }
 
 .post a:hover .post a:active{
@@ -129,8 +156,8 @@ time.post-date, figcaption, .post-meta{
 }
 
 aside[role="complementary"]{
-  background-color:red;
-  color:#c0c0c0;
+  background-color:#FF4252;
+  color:#ffffff;
   padding:1.8rem;
 }
 
@@ -156,7 +183,8 @@ article.widget footer{
 }
 
 #colophon{
-  background-color: red;
+  background-color: #E8843C;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%239C92AC' fill-opacity='0.8'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 #colophon h6{
@@ -172,6 +200,7 @@ article.widget footer{
   font-size: 1.4rem;
   /* Top | left/right | Bottom*/
   margin:20px auto 40px;
+  border-bottom: 1px dotted #c0c0c0;
 }
 
 #additional-elements a{
@@ -179,25 +208,24 @@ article.widget footer{
 }
 
 #additional-elements a:hover{
-  color: white;
   text-decoration: none;
 }
 
 
 #additional-elements h3{
-  border-left:10px solid #ffffff;
+  border-left:10px solid #E8843C;
   padding: 8px;
 }
 
 table{
   width:100%;
-  border:1px solid cadetblue;
+  border:1px solid #E8503C;
   border-collapse:collapse;
 }
 
 tr{}
 
-tr:nth-child(odd){
+tr:nth-child(even){
   background-color: rgba(0,0,0,.1);
 }
 
@@ -210,19 +238,19 @@ td:nth-child(2n), td:nth-child(3n){
 }
 
 th{
-  background-color: #172635;
+  background-color: #FF4252;
   color:#ffffff;
   width: 33%;
   padding: 10px;
 }
 
 td{
-  border:1px solid #5f9ea0;
+  border:1px solid #E8503C;
   padding:5px;
 }
 
 table caption{
-  color: #3b638b;
+  color: #E8843C;
   padding:10px;
   font-weight: bold;
   font-size: 1.4 rem;
@@ -247,6 +275,35 @@ dt{
 }
 dd{margin-left: 0;}
 /*adjacent sibling combinator*/
-dd +dt{
+dd + dt{
   margin-top:1rem;
+}
+
+#additional-elements blockquote{
+  background-color: rgba(0,0,0,.15);
+  padding: 30px 40px;
+  border: 5px double #c0c0c0;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+
+#additional-elements cite{
+  display: block;
+  font-size: .6rem;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  header.primary nav ul {
+    flex-direction: column;
+  }
+  header.primary nav a {
+    display: block;
+  }
+
+  header.primary nav li {
+    margin-bottom: 10px;
+  }
 }
