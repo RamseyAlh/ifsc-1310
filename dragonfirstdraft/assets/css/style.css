@@ -66,7 +66,7 @@ header.primary {
 
   header.primary::before {
     content: "";
-    background-image: url("dragoncrew.8k.jpg");
+    background-image: url("../img/dragoncrew.8k.jpg");
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -77,6 +77,7 @@ header.primary {
   }
 
 header.primary h1 a{
+  position: relative;
   color:#ffffff;
   text-decoration: none;
 }
@@ -85,6 +86,7 @@ h1{
 }
 
 header.primary h2{
+  position: relative;
   font-size: 1.4rem;
   /* Top | left/right | Bottom*/
   margin:20px auto 40px;
@@ -97,6 +99,7 @@ header.primary nav{
 }
 header.primary nav ul{
   /*removes extra space for list ittem attachments*/
+  position: relative;
   padding:0;
   display: flex;
   flex-direction: row;
@@ -243,6 +246,7 @@ table{
   width:90%;
   border:1px solid #53616B;
   border-collapse:collapse;
+  margin: 40px auto;
 }
 
 tr{}
@@ -262,7 +266,7 @@ td:nth-child(2n), td:nth-child(3n){
 th{
   background-color: #1B2C38;
   color:#ffffff;
-  width: 33%;
+  width: 25%;
   padding: 4px;
 }
 
@@ -275,7 +279,7 @@ table caption{
   color: #1B2C38;
   padding:10px;
   font-weight: bold;
-  font-size: 3 rem;
+  font-size: 1.4rem;
 }
 
 #additional-elements ol{
