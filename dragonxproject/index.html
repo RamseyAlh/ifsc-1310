@@ -13,18 +13,18 @@
 </head>
 
 <body>
-    <nav role="navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
   <header role="banner" class="primary">
     <h1><a href="index.html">SpaceX Dragon</a></h1>
     <h2>First Private Spacecraft to the Spacestation</h2>
   </header>
+  <nav role="navigation" id="navbar">
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
   <section id="intro" class="container">
     <h2>Dragon Vehicle Overview</h2>
     <p>Dragon is a free-flying spacecraft designed to deliver both cargo and people to orbiting destinations. 
@@ -80,6 +80,19 @@
       </ul>
     </article>
   </section>
+  <script>
+    var navbar = document.getElementById("navbar");
+    var menu = document.getElementById("menu");
+
+    window.onscroll = function(){
+      if(window.pageXOffset >=menu.offsetTop){
+        navbar.classList.add("sticky");
+      }
+      else{
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
 </body>
 <footer id="colophon" role="contentinfo">
   <h6>&copy; 2022 SPACEX</h6>

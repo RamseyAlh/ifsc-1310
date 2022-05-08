@@ -350,3 +350,11 @@ dd + dt{
   nav {
     background-color:  #181C1F;
   }
+
+  nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 8%;
+    display: flex;
+  }
